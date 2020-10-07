@@ -51,9 +51,9 @@ def predict():
        Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]])
         output = round(prediction[0],2)
         if output<0:
-            return render_template('index.html', prediction_text="Sorry you cannot sell this car.")
+            return render_template('index.html', prediction_text="Sorry you cannot sell this car !")
         else:
-            return render_template('index.html', prediction_text="You can sell this car at {}".format(output))
+            return render_template('index.html', prediction_text="You can sell this car at {} lakhs !!".format(output))
     else:
         return render_template("index.html")
 
